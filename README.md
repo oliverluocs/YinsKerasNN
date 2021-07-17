@@ -1,21 +1,21 @@
-# YinsKerasNN
+yin
 
 This package uses Keras as framework which provides a high-level neural networks API developed with a focus on enabling fast experimentation.
 
 <p align="center">
-  <img src="https://github.com/yiqiao-yin/YinsKerasNN/blob/master/pics/NNTraining.gif">
+  <img src="https://github.com/yiqiao-yin/LuoKerasNN/blob/master/pics/NNTraining.gif">
 </p>
 
 
 ## Information
 
 Information:
-- Package: YinsKerasNN
+- Package: OliverKerasNN
 - Type: Package
-- Title: Yin's Version of Neural Network through Keras Framework
+- Title: Oliver's Version of Neural Network through Keras Framework
 - Version: 0.1.0
-- Author: Yiqiao Yin
-- Maintainer: Yiqiao Yin <eagle0504@gmail.com>
+- Author: Oliver Luo
+- Maintainer: Oliver Luo
 - Description: This package uses Keras as framework which provides a high-level neural networks API developed with a focus on enabling fast experimentation.
 - License: GPL-2 [What is GPL-2?](http://r-pkgs.had.co.nz/description.html#license)
 - imports: quantmod,stats,xts,TTR,knitr,keras
@@ -41,7 +41,7 @@ library(keras)
 install_keras()
 
 # Install Packge using devtools from below
-devtools::install_github("yiqiao-yin/YinsKerasNN")
+devtools::install_github("oliverluocs/OliverKerasNN")
 ```
 
 ### Usage
@@ -74,7 +74,7 @@ An example usage of this package can refer to the following.
 
 # ACKNOWLEDGEMENT:
 # In this script, let us (1) create a toy data set, and (2) run Yin's version of Keras Neural Network.
-# COPYRIGHT @ YIQIAO YIN
+# COPYRIGHT @ OLIVER LUO
 
 # README:
 # Open a new clean RStudio.
@@ -111,12 +111,12 @@ set.seed(1)
 all <- all[sample(1:nrow(all), nrow(all)), ]
 all[1:5,1:3]; dim(all)
 
-###################### RUN FUNCTION: YinsKerasNN #######################
+###################### RUN FUNCTION: OliverKerasNN #######################
 
 # We want to store everything in an object:
 # Let us call this **Result**
 Begin.Time <- Sys.time()
-Result <- YinsKerasNN::YinsKerasNN(x, y, cutoff = 0.8)
+Result <- OliverKerasNN::OliverKerasNN(x, y, cutoff = 0.8)
 End.Time <- Sys.time(); print(paste0("Time spent on training this machine: ", End.Time - Begin.Time))
 
 # Check:
@@ -158,12 +158,12 @@ test <- data.frame(cbind(y_test, x_test))
 colnames(test) <- colnames(train)
 all <- data.frame(rbind(train, test)); colnames(all)[1] <- "label"
 
-###################### RUN FUNCTION: YinsKerasNN #######################
+###################### RUN FUNCTION: OliverKerasNN #######################
 
 # We want to store everything in an object:
 # Let us call this **Result**
 Begin.Time <- Sys.time()
-Result <- YinsKerasNN::YinsKerasNN(x = all[,-1], y = all[, 1], cutoff = 0.8)
+Result <- OliverKerasNN::OliverKerasNN(x = all[,-1], y = all[, 1], cutoff = 0.8)
 End.Time <- Sys.time(); print(paste0("Time spent on training this machine: ", End.Time - Begin.Time))
 
 # Check:
@@ -176,12 +176,3 @@ Result$Testing.Accuracy
 
 ######################### END SCRIPT #############################
 ```
-
-## Built With
-
-* [Yiqiao Yin's Research](https://yinscapital.com/research/): We conduct research at Yin's Capital and we develop packages for trading algorithms.
-* [Keras R Interface](https://keras.rstudio.com/): I used this site as code source for Kears R interface. 
-
-## Contributing
-
-Yiqiao Yin (myself) is the sole owner and manager for this package. The origin of author's inspiration of developing this package comes from his experience in statistical machine learning and stock market. For story, please click [here](https://github.com/yiqiao-yin/Statistical-Machine-Learning/blob/master/Story.md). For more detailed information about deep learning, please see my [notes](https://yiqiaoyin.files.wordpress.com/2018/02/deep-learning-notes.pdf).
