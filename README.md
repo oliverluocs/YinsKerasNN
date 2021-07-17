@@ -3,7 +3,7 @@ yin
 This package uses Keras as framework which provides a high-level neural networks API developed with a focus on enabling fast experimentation.
 
 <p align="center">
-  <img src="https://github.com/yiqiao-yin/LuoKerasNN/blob/master/pics/NNTraining.gif">
+  <img src="https://github.com/yiqiao-yin/YinsKerasNN/blob/master/pics/NNTraining.gif">
 </p>
 
 
